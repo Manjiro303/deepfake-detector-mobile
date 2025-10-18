@@ -19,3 +19,7 @@ web-build/
 # Model files (too large for git)
 assets/model/*.bin
 assets/model/group*
+
+# DO NOT ignore package-lock.json
+# It's needed for GitHub Actions
+# package-lock.json  ← Make sure this line is NOT here
