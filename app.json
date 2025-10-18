@@ -1,0 +1,52 @@
+{
+  "expo": {
+    "name": "Deepfake Detector",
+    "slug": "deepfake-detector",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#8B5CF6"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.yourcompany.deepfakedetector",
+      "infoPlist": {
+        "NSCameraUsageDescription": "This app needs camera access to record videos for deepfake detection.",
+        "NSPhotoLibraryUsageDescription": "This app needs photo library access to analyze videos for deepfakes.",
+        "NSMicrophoneUsageDescription": "This app needs microphone access to record videos."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#8B5CF6"
+      },
+      "package": "com.yourcompany.deepfakedetector",
+      "permissions": [
+        "android.permission.CAMERA",
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.WRITE_EXTERNAL_STORAGE",
+        "android.permission.RECORD_AUDIO"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "The app needs access to your photos to analyze videos for deepfakes.",
+          "cameraPermission": "The app needs camera access to record videos for deepfake detection."
+        }
+      ]
+    ]
+  }
+}
