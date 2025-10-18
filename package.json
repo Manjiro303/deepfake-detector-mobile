@@ -6,7 +6,9 @@
     "start": "expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
-    "web": "expo start --web"
+    "web": "expo start --web",
+    "generate-assets": "node generate-assets.js",
+    "setup": "npm install && npm install sharp --save-dev && npm run generate-assets"
   },
   "dependencies": {
     "expo": "~50.0.0",
