@@ -27,7 +27,7 @@ Mobile application for detecting deepfake videos using on-device machine learnin
 ### Installation
 ```bash
 # Clone repository
-git clone https://github.com/YOUR_USERNAME/deepfake-detector-mobile.git
+git clone https://github.com/Manjiro303/deepfake-detector-mobile.git
 cd deepfake-detector-mobile
 
 # Install dependencies
