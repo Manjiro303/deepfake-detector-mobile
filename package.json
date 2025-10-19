@@ -11,18 +11,19 @@
     "setup": "npm install && npm install sharp --save-dev && npm run generate-assets"
   },
   "dependencies": {
+    "@expo/vector-icons": "^14.0.0",
+    "@react-native-async-storage/async-storage": "1.21.0",
+    "@tensorflow/tfjs": "^4.17.0",
+    "@tensorflow/tfjs-react-native": "^0.8.0",
     "expo": "~50.0.0",
     "expo-av": "~13.10.4",
     "expo-file-system": "~16.0.6",
+    "expo-gl": "~13.6.0",
     "expo-image-picker": "~14.7.1",
     "expo-status-bar": "~1.11.1",
     "react": "18.2.0",
     "react-native": "0.73.2",
-    "@tensorflow/tfjs": "^4.17.0",
-    "@tensorflow/tfjs-react-native": "^0.8.0",
-    "@react-native-async-storage/async-storage": "1.21.0",
-    "expo-gl": "~13.6.0",
-    "@expo/vector-icons": "^14.0.0"
+    "react-native-fs": "^2.20.0"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
