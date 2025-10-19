@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1242" height="2436" viewBox="0 0 1242 2436" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#7C3AED"/>
+      <stop offset="50%" style="stop-color:#8B5CF6"/>
+      <stop offset="100%" style="stop-color:#A78BFA"/>
+    </linearGradient>
+  </defs>
+  <rect width="1242" height="2436" fill="url(#grad)"/>
+  <circle cx="124.2" cy="487.20000000000005" r="62.1" fill="white" opacity="0.1"/>
+  <circle cx="1117.8" cy="1705.1999999999998" r="99.36" fill="white" opacity="0.08"/>
+  <g transform="translate(621, 1107.2727272727273)">
+    <path d="M 0 -365.4 L -149.04 -243.60000000000002 L -149.04 121.80000000000001 Q -149.04 292.32 0 365.4 Q 149.04 292.32 149.04 121.80000000000001 L 149.04 -243.60000000000002 Z" fill="white" opacity="0.95" stroke="white" stroke-width="3.726"/>
+    <path d="M -49.68 24.36 L -12.42 121.80000000000001 L 74.52 -73.08" fill="none" stroke="#8B5CF6" stroke-width="9.936" stroke-linecap="round"/>
+  </g>
+  <text x="621" y="1583.4" font-family="system-ui" font-size="68.31" font-weight="bold" fill="white" text-anchor="middle">Deepfake Detector</text>
+  <text x="621" y="1705.1999999999998" font-family="system-ui" font-size="37.26" fill="white" opacity="0.8" text-anchor="middle">AI-Powered Video Verification</text>
+</svg>
