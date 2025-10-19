@@ -45,8 +45,8 @@ export default function App() {
         setResult(null);
       }
     } catch (error) {
+      console.error('Error picking video:', error);
       Alert.alert('Error', 'Failed to pick video');
-      console.error(error);
     }
   };
 
@@ -71,8 +71,8 @@ export default function App() {
         setResult(null);
       }
     } catch (error) {
+      console.error('Error recording video:', error);
       Alert.alert('Error', 'Failed to record video');
-      console.error(error);
     }
   };
 
@@ -86,11 +86,17 @@ export default function App() {
     setResult(null);
 
     try {
+      console.log('Starting analysis for video:', videoUri);
       const analysisResult = await analyzeVideo(videoUri);
+      console.log('Analysis result:', analysisResult);
       setResult(analysisResult);
     } catch (error) {
-      Alert.alert('Analysis Failed', 'Failed to analyze the video. Please try again.');
-      console.error(error);
+      console.error('Error analyzing video:', error);
+      Alert.alert(
+        'Analysis Failed',
+        'Failed to analyze the video. Please try again.\n\n' + 
+        (error instanceof Error ? error.message : 'Unknown error')
+      );
     } finally {
       setIsAnalyzing(false);
     }
@@ -200,15 +206,21 @@ export default function App() {
       )}
 
       <View style={styles.infoSection}>
-        <Text style={styles.infoTitle}>How It Works</Text>
+        <Text style={styles.infoTitle}>📋 Demo Mode Active</Text>
         <Text style={styles.infoText}>
-          • Our AI analyzes video frames using ResNext CNN + LSTM
+          Currently running in demo mode with simulated results.
         </Text>
         <Text style={styles.infoText}>
-          • Detects manipulation patterns invisible to human eye
+          To integrate real AI model:
         </Text>
         <Text style={styles.infoText}>
-          • Processing happens on your device for privacy
+          1. Convert your trained model to TensorFlow.js format
+        </Text>
+        <Text style={styles.infoText}>
+          2. Place model files in assets/model/
+        </Text>
+        <Text style={styles.infoText}>
+          3. Uncomment code in services/deepfakeDetector.ts
         </Text>
       </View>
     </ScrollView>
