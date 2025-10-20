@@ -86,17 +86,19 @@ export default function App() {
     setResult(null);
 
     try {
-      console.log('Starting analysis for video:', videoUri);
+      console.log('[App] Starting analysis for video:', videoUri);
       const analysisResult = await analyzeVideo(videoUri);
-      console.log('Analysis result:', analysisResult);
-      setResult(analysisResult);
+      console.log('[App] Analysis result:', analysisResult);
+      
+      if (analysisResult) {
+        setResult(analysisResult);
+      } else {
+        Alert.alert('Error', 'No result returned from analysis');
+      }
     } catch (error) {
-      console.error('Error analyzing video:', error);
-      Alert.alert(
-        'Analysis Failed',
-        'Failed to analyze the video. Please try again.\n\n' + 
-        (error instanceof Error ? error.message : 'Unknown error')
-      );
+      console.error('[App] Error analyzing video:', error);
+      const errorMsg = error instanceof Error ? error.message : 'Unknown error occurred';
+      Alert.alert('Analysis Failed', errorMsg);
     } finally {
       setIsAnalyzing(false);
     }
